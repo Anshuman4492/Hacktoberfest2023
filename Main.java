@@ -12,61 +12,14 @@ public class Main {
     // LinkedList<Integer> ll = new LinkedList<>();
     // for(Map.Entry<Integer,Integer> e:map.entrySet())pn(e.getKey()+"
     // "+e.getValue());
-    // int n = c.i(), max = 0;
-    // HashSet a[] = new HashSet[n], union = new HashSet<>(), ans = new
-    // HashSet<>();for(
-    // int i = 0;i<n;i++)
-    // {
-    // int k = c.i();
-    // HashSet<Integer> set = new HashSet<>();
-    // for (int j = 0; j < k; j++) {
-    // int x = c.i();
-    // set.add(x);
-    // union.add(x);
-    // }
-    // a[i] = set;
-    // }
 
-    // pn(union);
-    // for (int i = 0; i < n; i++) {
-    // HashSet<Integer> curr = new HashSet<>();
-    // for (int j = 0; j < n; j++) {
-    // if (i == j)
-    // continue;
-    // curr.addAll(a[j]);
-    // }
-    // pn(curr);
-    // if (curr.size() != union.size()) {
-    // max = Math.max(max, curr.size());
-    // ans = curr;
-    // }
-    // }
-    // pn(ans);
-    // pn(max);
     // *********************** Code Begins From Here*************************
     public static void solve() {
-        int n = c.i();
-        long a[] = new long[n];
-        a[0] = 1;
-        a[1] = 4;
-        for (int i = 2; i < n; i++) {
-            a[i] = i + 4;
-            long x = a[i - 1] + a[i - 2], tmp = a[i];
-            while ((3 * tmp) % x == 0)
-                tmp++;
-            a[i] = tmp;
-            // for (int j = 1;; j++) {
-            // if (((3 * (x + j)) % x) != 0) {
-            // a[i] = x + j;
-            // break;
-            // }
-            // }
-        }
-        // for (int i = 2; i < n; i++) {
-        // if ((3 * a[i]) % (a[i - 1] + a[i - 2]) == 0)
-        // pn(0);
-        // }
-        watch(a);
+        int n = c.i(), k = c.i();
+        long x = c.l();
+        long sum = k * (k + 1L) >> 1, lastK = (n * (n + 1L) >> 1) - ((n - k) * (n - k + 1L) >> 1);
+
+        prn();
     }
 
     public static void main(String[] args) throws FileNotFoundException {
